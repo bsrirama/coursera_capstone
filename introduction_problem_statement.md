@@ -51,3 +51,4 @@ If our hypothesis is true, the clusters should show circular patterns as can be 
 
 
 ![](C:\Users\srirama\Projects\coursera_capstone\image-20210304204518465.png)
+
