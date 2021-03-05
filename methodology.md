@@ -48,7 +48,7 @@ If our hypothesis is true, the clusters should show circular patterns as can be 
 
 
 
-![](C:\Users\srirama\Projects\coursera_capstone\image-20210304204518465.png)
+![](image-20210304204518465.png)
 
 
 
@@ -69,7 +69,7 @@ In this section, we described the data used  and preparation of the dataset used
   - The Hague has 46 districts, the centroids of which are shown in the image below.
   - This data is stored in a csv
 
-![image-20210304204641870](C:\Users\srirama\Projects\coursera_capstone\image-20210304204641870.png)
+![image-20210304204641870](image-20210304204641870.png)
 
 
 
@@ -78,7 +78,7 @@ In this section, we described the data used  and preparation of the dataset used
 
 
 
-![image-20210304204518465](C:\Users\srirama\Projects\coursera_capstone\image-20210304204518465.png)
+![image-20210304204518465](image-20210304204518465.png)
 
 
 
@@ -90,7 +90,7 @@ In this section, we described the data used  and preparation of the dataset used
 
   
 
-![image-20210304204828183](C:\Users\srirama\Projects\coursera_capstone\image-20210304204828183.png)
+![image-20210304204828183](image-20210304204828183.png)
 
 
 
