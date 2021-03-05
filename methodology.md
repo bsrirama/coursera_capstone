@@ -1,10 +1,10 @@
-# Title: Understanding urban texture over time - Comparing Neighborhoods of The Hague
+# Title: Understanding urban growth over time - Comparing Neighborhoods of The Hague
 
-#### 
+
 
 [TOC]
 
-#### 
+
 
 
 
@@ -26,11 +26,11 @@ The Hague, in Netherlands is one of the oldest cities in Netherlands and the gov
 
 ![The Hague: Bringing sustainability to the heart of events](https://www.sustaineurope.com/images/binnehof%20with%20swan.jpg?crc=212812994)
 
-
+​			Image 1
 
 ![Contact Us | The Hague Convention Bureau](https://conventionbureau.thehague.com/sites/thcb_corp/files/styles/content_image_small_500x/public/2020-01/skyline%20buildings%20from%20above_0.png?itok=IhYKj6oP)
 
-
+​									image 2
 
 ### Problem Statement & Hypothesis
 
@@ -50,7 +50,7 @@ If our hypothesis is true, the clusters should show circular patterns as can be 
 
 ![](image-20210304204518465.png)
 
-
+Image 3
 
 
 
@@ -71,6 +71,8 @@ In this section, we described the data used  and preparation of the dataset used
 
 ![image-20210304204641870](image-20210304204641870.png)
 
+Image 4
+
 
 
 - **Buildings data**:  This data shows the age of each building in the Hague, we could not get the raw data, but the visualization of the data can be see on this [link](https://parallel.co.uk/netherlands/#12.34/52.07984/4.28223). We will be using this data to validate our results to show if age of a neighborhood affects the activities and venues in the neighborhood. see Image below. 
@@ -79,6 +81,8 @@ In this section, we described the data used  and preparation of the dataset used
 
 
 ![image-20210304204518465](image-20210304204518465.png)
+
+Image 5
 
 
 
@@ -91,6 +95,10 @@ In this section, we described the data used  and preparation of the dataset used
   
 
 ![image-20210304204828183](image-20210304204828183.png)
+
+Image 6
+
+
 
 
 
@@ -137,7 +145,7 @@ After the cleaning, we tabulate the venue category to find unique and frequent c
 
 ![img](img1.png)
 
-
+​										Image 7
 
 ###  Most omnipresent venue category
 
@@ -145,7 +153,7 @@ Here we try to see how each venue category is spread in each neighborhood (distr
 
 ![img](img2.png)
 
-
+​										Image 8
 
 ### Top Neighborhoods (districts) with most venues
 
@@ -155,11 +163,19 @@ From this data we can also extract which neighborhood has most venues in them or
 
 ![img](img3.png)
 
+​										Image 9
+
+
+
 
 
 We have mapped these 5 districts and we notice that they are right in the center of the city and 1 of them on the beach which is a very popular beach in entire Netherlands. So the results appear to show reality.
 
 ![image-20210305200310962](image-20210305200310962.png)
+
+​										Image 10
+
+
 
 
 
@@ -182,6 +198,8 @@ In order to prepare for the cluster analysis, we have to encode each of the 189 
 
 ![image-20210305200807772](image-20210305200807772.png)
 
+​										Image 11
+
 
 
 ### Suitable Number of Clusters
@@ -190,11 +208,78 @@ One of the pitfalls of clustering algorithms are that with increase in number of
 
 ![img](img7.png)
 
+​										Image 12
+
+
 
 We analysed our data with a range of 1 to 10 clusters and the elbow chart above shows that around 5 clusters are a good fit for our data. In the following steps, we will analyse our data with 5 clusters
 
 
 
-### Mapping the Clusters
+
+
+### Discussion and Conclusion
+
+
+
+#### Ground Reality
+
+We analyze the clusters in terms of an urban planning paradigm. That is if the clusters really capture the essence of the city and it growth. We refer the reader to this image 13 and a good understanding of it. This image forms the verification of our model.  A larger image is shown in the beginning of this report. This image shows how old different regions of the city are based on the age of construction of the buildings. 
+
+
+
+The older buildings are dark-red, and the middle aged are in orange while the modern buildings and developments are blue in color. We can see from the image that the central core is red to dark red, surrounding this core is orange color and surrounding these orange areas are the blue areas which are modern developments. 
+
+
+
+<img src="image-20210304204518465.png" style="zoom:33%;" />
+
+​										Image 13
+
+#### Clusters from Analysis
+
+
+
+- Observations: 
+  - These clusters are mapped in the map in image 14 below. Referring to the table 1 and the map, we can say , city is growing in a circular fashion. As discussed in ground reality.
+  - The oldest part is the city center and the beach, this is captured correctly with the brown cluster 0. These locations in reality have smaller houses  and shops.
+- Within each cluster, we have tabulated top 5 venue categories and their quantity in each cluster.  These are shown in Table 2. 
+- 	Cluster 1 is modern development and we see presence of Shopping mall which are not in other clusters. 
+- Cluster 2,3 are outer clusters and we can see the presence of Tram stations and Light rail stations. These transportation objects are among the most frequent venues in Foursquare API indicating that there are no other prominent venues. As these clusters are far from the city, they need such mass transportation modes to reach the city. 
+- Within the  most dense clusters, cluster 0 we see a huge number of restaurants, and this agrees to the reality, because most of Europe has this city center where all the squares have restaurants and shops around a church. 
+
+
+
+
+
+
+
+Table 1
+
+| Color      | Cluster | No. of districts | Position in city         | time of development        |
+| ---------- | ------- | ---------------- | ------------------------ | -------------------------- |
+| brown      | 0       | 18               | Inner core               | Oldest (1800's)            |
+| red        | 4       | 14               | first ring to inner core | second oldest (early 1900) |
+| orange     | 3       | 6                | second ring              | 1925-1950                  |
+| dark blue  | 1       | 5                | mixed/periphery          | 2000's                     |
+| light blue | 2       | 3                | mixed/periphery          | 2000's                     |
+
+
+
+
 
 ![image-20210305203746441](image-20210305203746441.png)
+
+​										Image 14
+
+
+
+
+
+Table 2
+
+![image-20210305210836387](image33-20210305210836387.png)
+
+## Conclusion
+
+In this project, the neighborhoods of Hague were clustered into multiple groups based on the categories (types) of the venues in these neighborhoods. The results showed that the clusters indeed reflect the existing reality in terms of development and landuse. If a deeper analysis—taking more aspects into account—is performed, it might result in discovering more intricate details that can help urban planners and designers understand the growth of the city.
